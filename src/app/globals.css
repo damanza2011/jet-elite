@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #080B10;
+  --foreground: #F4F5F8;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enfoque accesible WCAG 2.2 AA */
+:focus-visible {
+  outline: 2px solid #C9A86A;
+  outline-offset: 3px;
+}
+
+/* Scrollbar refinada para interfaces oscuras */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080B10;
+}
+::-webkit-scrollbar-thumb {
+  background: #1C2433;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A86A;
+}
+
+/* Utilidad para evitar saltos de layout (CLS = 0) */
+.contain-paint {
+  contain: paint;
+}
